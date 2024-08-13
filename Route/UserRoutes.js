@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const UserController = require('../Controller/UserController');
-const checkUser = require('./Middleware/UserMiddleware');
+const checkUser = require('..//Middleware/UserMiddleware');
 
 router.post('/signup',checkUser,UserController.signup_post);
 
@@ -17,4 +17,4 @@ router.put('/update/:id',checkUser,UserController.update_profile_put);
 
 router.delete('/delete/:id',checkUser,UserController.delete_my_profile);
 
-moudle.exports = router;
+module.exports = router;
